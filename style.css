@@ -406,6 +406,7 @@ inset: 0;
 }
 /* contact  */
 .contact-container{
+  scroll-margin-top: 4rem;
   background: #f0f0f3;
 }
 .contact-section{
@@ -462,6 +463,103 @@ inset: 0;
 .contact-btn:hover{
   background-color: #282834;
 }
+/* timings */
+.timing-container{
+  background: url('./assets/opening-bg.jpg') center/cover no-repeat fixed;
+}
+.timing-overlay{
+  background: #2828346c;
+  
+}
+.timings{
+  padding: 30px 15px;
+  color: white;
+}
+.timings-header{
+  text-align: center;
+}
+.timings-header h3{
+  font-size: 28px;
+}
+.timings-header p{
+  font-size: 16px;
+  color: #f0f0f3;
+}
+.timings article{
+  display: grid;
+  gap: 1rem;
+  margin: 30px auto;
+  max-width: 400px;
+  width: 100%;
+}
+.timings article h6,.timings article p{
+  font-size: 16px;
+  font-weight: 600;
+  width: fit-content;
+  word-wrap: nowrap;
+}
+.timings article span{
+  flex-grow: 1;
+ 
+  height: 1px;
+  background: white;
+}
+.timings article div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+/* reviews */
+.reviews-container{
+  background: #f0f0f3;
+}
+.reviews-section{
+  padding: 30px 15px;
+}
+.reviews-header{
+  text-align: center;
+  color: #282834;
+  font-size: 28px;
+}
+.review-card{
+  padding: 15px;
+  text-align: center;
+  display: grid;
+  gap: .5rem;
+  color: #282834;
+  justify-content: center;
+}
+.review-card p{
+  font-size: 16px;
+}
+.review-quote i{
+  font-size: 2.5rem;
+  color: #dc2751;
+}
+.review-line{
+  width: 100px;
+  background: #dc2751;
+  height: 2px;
+  justify-self: center;
+  margin: 1rem auto;
+}
+.review-person{
+  font-size: 18px;
+  font-weight: bold;
+}
+.review-time{
+  font-size: 15px;
+  font-weight: 300;
+}
+.review-stars{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1.5rem;
+  color: rgb(255, 204, 0);
+}
 @media screen and (min-width:768px) {
   nav{
     padding: 30px 40px;
@@ -500,6 +598,7 @@ inset: 0;
   .custom-nav-sm{
     display: none;
   }
+ 
   .swiper-button-next,
   .swiper-button-prev {
     display: block !important;
@@ -527,6 +626,21 @@ inset: 0;
   }
   .contact-links{
     gap: 2rem;
+  }
+  .timings-header h3{
+    font-size: 48px;
+  }
+  .reviews-section{
+    padding: 30px 40px;
+  }
+  .reviews-header{
+    font-size: 48px;
+  }
+  .review-card p{
+    font-size: 24px;
+  }
+  .reviews-nav{
+    display: flex ;
   }
 }
 
