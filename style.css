@@ -560,6 +560,91 @@ inset: 0;
   font-size: 1.5rem;
   color: rgb(255, 204, 0);
 }
+footer{
+  background: #282834;
+}
+.footer-section{
+  padding: 30px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo{
+  width: 100%;
+  max-width: 150px;
+}
+.impressum-link{
+  color: white;
+  font-size: 12px;
+  transition: all .5s ease;
+}
+.impressum-link:hover{
+  color: #dc2751;
+  text-decoration: underline;
+}
+/* imprint page */
+
+
+ .imprint-hero{
+  background: url('./assets/inner_HEADER_02.jpg') center/cover fixed;
+ }
+ .imprint-hero-overlay{
+  background: #282834b9;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 400px;
+  color: white;
+ }
+ .imprint-hero-content{
+  display: grid;
+  gap: 1rem;
+  
+ }
+ .imprint-hero-content h3{
+  font-size: 36px;
+ }
+ .imprint-hero-content h5{
+  font-size: 16px;
+  
+ }
+ .imprint-home-link{
+  font-size: 16px;
+  color: #dc2751;
+ }
+ .imprint-hero-content div{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+ }
+ .imprint-hero-content span{
+ font-size: 2rem;
+ font-weight: 200;
+ }
+ .imprint-section{
+  padding: 30px 15px;
+  display: grid;
+  gap: 1rem;
+  color: #282834;
+  font-size: 1rem;
+}
+.imprint-section article{
+  display: grid;
+  gap: 10px;
+}
+.imprint-section h4{
+  font-size: 24px;
+  color: #dc2751;
+  word-break: break-word; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+.imprint-section a{
+  color: #282834;
+}
 @media screen and (min-width:768px) {
   nav{
     padding: 30px 40px;
@@ -642,6 +727,12 @@ inset: 0;
   .reviews-nav{
     display: flex ;
   }
+  .footer-section,.imprint-section{
+    padding: 30px 40px;
+  }
+  .imprint-hero-content h3{
+    font-size: 48px;
+   }
 }
 
 

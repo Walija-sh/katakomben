@@ -19,7 +19,7 @@
 
 <body>
 
-  <nav>
+  <nav >
     <div class="nav-logo">
       <a href="./index.html"><img src="./assets/logo.png" alt=""></a>
     </div>
@@ -380,6 +380,17 @@
       </div>
     </div>
    </div>
+   <!-- footer -->
+    <footer>
+     <div class="footer-section section">
+      <div class="footer-logo">
+        <a href="./index.html"><img src="./assets/logo.png" alt=""></a>
+      </div>
+      <a class="impressum-link" href="./impressum.html">
+        Impressum
+      </a>
+     </div>
+    </footer>
 
   <script>
     // Wait for the DOM to load
@@ -401,10 +412,14 @@
     const menuToggler=document.getElementById('menu-toggler')
     const sidebar=document.getElementById('sidebar')
     const menuClose=document.getElementById('close-menu')
+    const bookBtn=document.querySelector('.book-btn-sm')
     menuToggler.addEventListener('click',()=>{
       sidebar.classList.add('sidebar-active')
     })
     menuClose.addEventListener('click',()=>{
+      sidebar.classList.remove('sidebar-active')
+    })
+    bookBtn.addEventListener('click',()=>{
       sidebar.classList.remove('sidebar-active')
     })
 
