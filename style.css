@@ -705,6 +705,7 @@ footer{
   .contact-form input,.contact-form textarea{
     padding: 22px 25px;
     border-radius: 30px;
+    font-size: 16px;
   }
   .contact-links a{
     font-size: 30px;

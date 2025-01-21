@@ -182,7 +182,7 @@
         <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i></a></li>
         </ul>
         </div>
-        <form class="contact-form" >
+        <form class="contact-form" id="contactForm" >
           <input type="text" name="firma" placeholder="Firma" required>
          <fieldset>
           <input type="text" name="anrede" placeholder="Anrede" required>
@@ -190,7 +190,7 @@
          </fieldset>
           <fieldset>
             <input type="text" name="vorname" placeholder="Vorname" required>
-          <input type="text" name="nachname" placeholder="Nachname" required>
+          <input type="text" name="nachname" placeholder="Nachname" >
           </fieldset>
           <fieldset>
             <input type="email" name="email" placeholder="E-Mail" required>
@@ -517,6 +517,70 @@ var swiper2 = new Swiper(".mySwiper2", {
   });
 
   </script>
+  <!-- email js -->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script>
+  // Initialize EmailJS
+  (function () {
+      emailjs.init("10r7ZfnvO5aFTWs6Z"); // Replace with your EmailJS public key
+  })();
+
+  // Add event listener to the form
+  document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Gather form data
+      const formData = new FormData(this);
+      const data = {
+          firma: formData.get("firma") || "",
+          anrede: formData.get("anrede") || "",
+          titel: formData.get("titel") || "",
+          vorname: formData.get("vorname") || "",
+          nachname: formData.get("nachname") || "",
+          email: formData.get("email") || "",
+          telefon: formData.get("telefon") || "",
+          betreff: formData.get("betreff") || "",
+          nachricht: formData.get("nachricht") || "",
+      };
+
+      // Send email using EmailJS
+      emailjs
+          .send("service_lr3v81v", "template_67dchyt", data) // Replace with your service ID and template ID
+          .then(() => {
+              console.log("Message sent successfully!");
+          })
+          .catch((error) => {
+              console.log("Failed to send message: " + JSON.stringify(error));
+          });
+  });
+</script>
+
+  <!-- email js template in given below -->
+   <!-- 
+  Betreff: Neue Nachricht von Ihrer Website
+
+Sehr geehrte Damen und Herren,
+
+Sie haben eine neue Nachricht über das Kontaktformular Ihrer Website erhalten. Hier sind die Details:
+
+Firma: {{firma}}
+Anrede: {{anrede}}
+Titel: {{titel}}
+Vorname: {{vorname}}
+Nachname: {{nachname}}
+E-Mail: {{email}}
+Telefon: {{telefon}}
+
+Betreff: {{betreff}}
+Nachricht:
+{{nachricht}}
+
+Mit freundlichen Grüßen,  
+
+ -->
   
 </body>
 </html>
