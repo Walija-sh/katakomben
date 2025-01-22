@@ -51,7 +51,7 @@
           <li><a href="www.instagram.com/katakombenstudios"><i class="ri-instagram-line"></i> <span>Instagram</span></a></li>
           <li><a href="mailto:info@katakomben-studios.de"><i class="ri-mail-line"></i><span>E-Mail</span></a></li>
           <li><a href=" http://wa.me/4917660836480" target="_blank" ><i class="ri-whatsapp-line"></i><span>Whatsapp</span></a></li>
-          <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i><span>Phone Number:</span></a></li>
+          <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i><span>Telefon</span></a></li>
         </ul>
         <div class="book-btn-sm">
           <a href="#contactUs"> Termin buchen</a>
@@ -74,7 +74,7 @@
             und unsere Leistungen!</h1>
         <p>Erlebe im Video, wie wir deinen Sound auf das nächste Level bringen und warum unser Studio der perfekte Ort für deine Musik ist. 
           <br>
-          Klicke auf den Play und starte jetzt deine Reise zu besseren Vocals!</p>
+          Klicke auf Play und starte jetzt deine Reise zu besseren Vocals!</p>
         <button id="play-button" class="play-button btn">Play</button>
         </div>
       </div>
@@ -84,7 +84,7 @@
    <div class="services-container">
     <section class=" section">
       <div class="services-header">
-        <p>was wir tun</p>
+        
         <h3>Leistungen</h3>
       </div>
       <div class="swiper mySwiper">
@@ -92,13 +92,8 @@
           <div class="swiper-slide">
             <div class="service-card">
               <div class="service-card-img">
-                <img src="./assets/serv_01.jpg" alt="services">
-                <div class="service-icon">
-                  <div>
-                    <span></span>
-                  <span></span>
-                  </div>
-                </div>
+                <img src="./assets/serv1.png" alt="services">
+                
               </div>
               <div class="service-card-content">
                 <h3>Recording</h3>
@@ -115,13 +110,8 @@
           <div class="swiper-slide">
             <div class="service-card">
               <div class="service-card-img">
-                <img src="./assets/serv_02.jpg" alt="services">
-                <div class="service-icon">
-                  <div>
-                    <span></span>
-                  <span></span>
-                  </div>
-                </div>
+                <img src="./assets/serv2.png" alt="services">
+                
               </div>
               <div class="service-card-content">
                 <h3> MIXING</h3>
@@ -138,13 +128,8 @@
           <div class="swiper-slide">
             <div class="service-card">
               <div class="service-card-img">
-                <img src="./assets/serv_03.jpg" alt="services">
-                <div class="service-icon">
-                  <div>
-                    <span></span>
-                  <span></span>
-                  </div>
-                </div>
+                <img src="./assets/serv3.png" alt="services">
+                
               </div>
               <div class="service-card-content">
                 <h3> MASTERING</h3>
@@ -183,20 +168,16 @@
         </ul>
         </div>
         <form class="contact-form" id="contactForm" >
-          <input type="text" name="firma" placeholder="Firma" required>
+          
          <fieldset>
-          <input type="text" name="anrede" placeholder="Anrede" required>
-          <input type="text" name="titel" placeholder="Titel">
+          <input type="text" name="anrede" placeholder="Anrede" required> 
+          <input type="text" name="name" placeholder="Name" required>
          </fieldset>
-          <fieldset>
-            <input type="text" name="vorname" placeholder="Vorname" required>
-          <input type="text" name="nachname" placeholder="Nachname" >
-          </fieldset>
           <fieldset>
             <input type="email" name="email" placeholder="E-Mail" required>
           <input type="tel" name="telefon" placeholder="Telefon">
           </fieldset>
-          <input type="text" name="betreff" placeholder="Betreff" required>
+          
           <textarea name="nachricht" placeholder="Nachricht" rows="5" required></textarea>
           <button class="contact-btn" type="submit">Senden</button>
         </form>
@@ -535,14 +516,10 @@ var swiper2 = new Swiper(".mySwiper2", {
       // Gather form data
       const formData = new FormData(this);
       const data = {
-          firma: formData.get("firma") || "",
           anrede: formData.get("anrede") || "",
-          titel: formData.get("titel") || "",
-          vorname: formData.get("vorname") || "",
-          nachname: formData.get("nachname") || "",
+          name: formData.get("name") || "",
           email: formData.get("email") || "",
           telefon: formData.get("telefon") || "",
-          betreff: formData.get("betreff") || "",
           nachricht: formData.get("nachricht") || "",
       };
 
@@ -550,13 +527,15 @@ var swiper2 = new Swiper(".mySwiper2", {
       emailjs
           .send("service_lr3v81v", "template_67dchyt", data) // Replace with your service ID and template ID
           .then(() => {
-              console.log("Message sent successfully!");
+              alert("Message sent successfully!");
           })
           .catch((error) => {
-              console.log("Failed to send message: " + JSON.stringify(error));
+              alert("Failed to send message. Please try again.");
+              console.error("Error: ", error);
           });
   });
 </script>
+
 
   <!-- email js template in given below -->
    <!-- 
