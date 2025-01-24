@@ -112,10 +112,12 @@ nav{
   right: 0;
   z-index: 500;
   transition: all 0.5s ease;
+ 
 }
 
 nav.sticky {
   background-color: #282834; 
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.395);
 }
 
 .nav-logo{
@@ -241,7 +243,7 @@ nav.sticky {
 
 /* image film */
 .hero-section{
-  padding-top: 3rem;
+  padding-top: 1rem;
 
   background: #282834;
 }
@@ -302,6 +304,13 @@ aspect-ratio: 16/9;
   margin-top: 1rem;
   font-weight: 500;
   display: inline-block;
+  background-color: transparent;
+  border: 2px solid #dc2751;
+  color: #dc2751;
+}
+.hero-btn:hover{
+  color: white;
+  background: #dc2751;
 }
 .hero-btn-lg{
   display: none;
@@ -746,6 +755,9 @@ footer{
   }
   .sidebar{
     display: none;
+  }
+  .hero-section{
+    padding-top: 3rem;
   }
   
   
