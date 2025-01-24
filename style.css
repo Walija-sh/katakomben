@@ -28,6 +28,50 @@ height: 100%;
 ul{
   list-style: none;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 200; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/Fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800; 
+  font-style: normal;
+}
+
 .section{
   width: 100%;
   max-width: 1280px;
@@ -76,7 +120,7 @@ nav.sticky {
 
 .nav-logo{
   width: 100%;
-  max-width: 80px;
+  max-width: 150px;
 }
 .menu-toggler{
   display: grid;
@@ -162,7 +206,7 @@ nav.sticky {
 }
 .nav-logo-sm{
   width: 100%;
-  max-width: 80px;
+  max-width: 150px;
 }
 .close-menu{
   color: white;
@@ -196,67 +240,82 @@ nav.sticky {
 }
 
 /* image film */
+.hero-section{
+
+  background: #282834;
+}
 .image-film-section{
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+
   transition: all .5s ease;
+  padding: 60px 30px;
+  padding-top: 8rem;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+
 }
 
 
 .image-film-section video{
-grid-row: 1/3;
-grid-column: 1/3;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  height: 100%;
-  z-index: 200;
+width: 100%;
+display: inline-block;
+object-fit: cover;
+aspect-ratio: 16/9;
   
 }
+
 .film-overlay-content{
-  grid-row: 1/3;
-grid-column: 1/3;
-  z-index: 300;
-  background: #282834a3;
-  padding: 60px 30px;
   display: grid;
   align-items: center;
   justify-content: center;
-  color: white;
+  
   text-align: center;
   animation: fade-in-out 1s ease-in-out;
 }
 
 .film-overlay-content h1{
-  font-size: 2rem;
-  line-height: 2rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   margin-bottom: 1rem;
 }
 .film-overlay-content p{
   color: #C9C9CC;
   font-size: 14px;
-  margin-bottom: 1rem;
 }
-.film-overlay-hidden{
+/* .film-overlay-hidden{
   opacity: 0;
-  pointer-events: none; /* Prevent interaction with hidden overlay */
+  pointer-events: none; 
   transition: opacity 0.5s ease;
-}
-.play-button{
+} */
+.play-button {
   padding: 15px 40px;
   text-transform: uppercase;
   margin-top: 1rem;
 }
-.stroke-text{
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+.hero-btn {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  font-weight: 500;
+  display: inline-block;
 }
+.hero-btn-lg{
+  display: none;
+}
+.hero-btn-sm{
+  display: inline-block;
+  margin: 0 auto;
+}
+.stroke-text{
+  /* -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white; */
+  color: #dc2751;
+}
+
 /* services */
 .services-container{
   background: #f0f0f3;
@@ -271,7 +330,7 @@ grid-column: 1/3;
 .services-header p{
   font-size: 28px;
   color: #dc2751;
-  font-family: "Annie Use Your Telescope", serif;
+  /* font-family: "Annie Use Your Telescope", serif; */
   font-weight: 600;
 }
 .services-header h3{
@@ -385,7 +444,7 @@ grid-column: 1/3;
 }
 /* contact  */
 .contact-container{
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 5rem;
   background: #f0f0f3;
 }
 .contact-section{
@@ -443,6 +502,53 @@ grid-column: 1/3;
   background-color: #282834;
 }
 /* timings */
+.location{
+  width: 100%;
+  height: 450px;
+}
+.location a{
+  width: 100%;
+  height: 100%;
+
+}
+.location img{
+  object-fit: cover;
+}
+.popup{
+  background: #28283461;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  padding: 20px;
+  display: none;
+}
+.popup div{
+  background: white;
+  padding:  15px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+#cancel-redirection{
+  justify-self: end;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+}
+#cancel-redirection:hover{
+  color: #dc2751;
+}
+.proceed-btn{
+  max-width: fit-content;
+  margin-top: 1rem;
+  margin-inline: auto;
+}
+.proceed-btn:hover{
+  background: #282834;
+  color: white;
+}
 .timing-container{
   background: url('./assets/opening-bg.jpg') center/cover no-repeat fixed;
 }
@@ -550,7 +656,7 @@ footer{
 }
 .footer-logo{
   width: 100%;
-  max-width: 80px;
+  max-width: 150px;
 }
 .impressum-link{
   color: white;
@@ -637,13 +743,14 @@ footer{
   .sidebar{
     display: none;
   }
+  .image-film-section{
+    grid-template-columns: 1fr 1fr;
+  }
+  
   .film-overlay-content{
-    padding-top: 6rem;
+    
     justify-content: flex-start;
     text-align: left;
-  }
-  .film-overlay-content > div{
-    max-width: 80%;
   }
   .film-overlay-content h1{
     font-size: 3rem;
@@ -652,6 +759,16 @@ footer{
   .film-overlay-content p{
     font-size: 16px;
     
+  }
+  .hero-btn{
+    padding: 15px 30px;
+    font-weight: 600;
+  }
+  .hero-btn-sm{
+    display: none;
+  }
+  .hero-btn-lg{
+    display: inline-block;
   }
   .services-header h3{
     font-size: 48px;
@@ -718,12 +835,12 @@ footer{
 
 @media screen and (min-width:1024px) {
   .image-film-section{
-    max-height: 100vh;
+    /* max-height: 100vh; */
   }
   .film-overlay-content{
     align-items: center;
   }
   .film-overlay-content > div{
-    max-width: 60%;
+    /* max-width: 60%; */
   }
 }

@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katakomben Studios - Landing Page</title>
+  <link rel="shortcut icon" href="./assets/mainLogo.png" type="image/x-icon">
   <!-- icons -->
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
 />
 <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
- <!-- Link Swiper's CSS -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <body>
 
   <nav >
     <div class="nav-logo">
-      <a href="./index.html"><img src="./assets/logo.png" alt=""></a>
+      <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
     </div>
     <div id="menu-toggler" class="menu-toggler">
       <span></span>
@@ -30,7 +30,7 @@
     </div>
     <div class="nav-links-lg">
       <ul class="social-links-lg">
-        <li><a href="www.instagram.com/katakombenstudios"><i class="ri-instagram-line"></i></a></li>
+        <li><a href="https://www.instagram.com/katakombenstudios/#"><i class="ri-instagram-line"></i></a></li>
         <li><a href="mailto:info@katakomben-studios.de"><i class="ri-mail-line"></i></a></li>
         <li><a href=" http://wa.me/4917660836480" target="_blank" ><i class="ri-whatsapp-line"></i></a></li>
         <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i></a></li>
@@ -42,13 +42,13 @@
     <div id="sidebar" class="sidebar">
       <div class="sidebar-header">
         <div class="nav-logo-sm">
-          <a href="./index.html"><img src="./assets/logo.png" alt=""></a>
+          <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
         </div>
         <span id="close-menu" class="close-menu"><i class="ri-close-large-line"></i></span>
       </div>
       <div class="sidebar-list">
         <ul class="social-links-sm">
-          <li><a href="www.instagram.com/katakombenstudios"><i class="ri-instagram-line"></i> <span>Instagram</span></a></li>
+          <li><a href="https://www.instagram.com/katakombenstudios/#"><i class="ri-instagram-line"></i> <span>Instagram</span></a></li>
           <li><a href="mailto:info@katakomben-studios.de"><i class="ri-mail-line"></i><span>E-Mail</span></a></li>
           <li><a href=" http://wa.me/4917660836480" target="_blank" ><i class="ri-whatsapp-line"></i><span>Whatsapp</span></a></li>
           <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i><span>Telefon</span></a></li>
@@ -59,12 +59,9 @@
       </div>
     </div>
   </nav>
-  <header>
-    <section class="image-film-section">
-      <video id="background-video"   loop    poster="assets/filmCover.jpg">
-        <source src="assets/imageFilm.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+  <header class="hero-section">
+    <section class="image-film-section section">
+     
       <div class="film-overlay-content " >
         <div>
           <h1>Schau hinter die Kulissen – Entdecke die 
@@ -75,9 +72,17 @@
         <p>Erlebe im Video, wie wir deinen Sound auf das nächste Level bringen und warum unser Studio der perfekte Ort für deine Musik ist. 
           <br>
           Klicke auf Play und starte jetzt deine Reise zu besseren Vocals!</p>
-        <button id="play-button" class="play-button btn">Play</button>
+        <!-- <button id="play-button" class="play-button btn">Play</button> -->
+        <a  href="#contactUs" class="hero-btn hero-btn-lg btn">Kennlerngespräch buchen</a>
         </div>
       </div>
+      <div class="hero-video video-container">
+        <video id="hero-video"  controls    loop    poster="assets/filmCover.jpg">
+          <source src="assets/imageFilm.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <a  href="#contactUs" class="hero-btn hero-btn-sm btn">Kennlerngespräch buchen</a>
     </section>
   </header>
   <!-- services -->
@@ -233,10 +238,21 @@
       </div>
     </div>
    </div>
-  <!-- gmap -->
-   <div class="google-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.9721380088645!2d8.465517099999998!3d49.48503329999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797cda8c89f349d%3A0x891fd3270cc26737!2sTonstudio%20-%20Katakomben%20Studios%20%7C%20Mannheim!5e0!3m2!1sen!2s!4v1737397683272!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- location -->
+   <div class="location">
+    <a target="_blank" href="https://www.google.com/maps/place/Tonstudio+-+Katakomben+Studios+%7C+Mannheim/@49.485033,8.465517,16z/data=!4m6!3m5!1s0x4797cda8c89f349d:0x891fd3270cc26737!8m2!3d49.4850333!4d8.4655171!16s%2Fg%2F11w7lmpl2d?hl=en&entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D">
+      <img src="./assets/location.png" alt="">
+    </a>
    </div>
+   <!-- popup -->
+<div id="popup" class="popup" >
+    <div>
+      <span id="cancel-redirection"><i class="ri-close-line"></i></span>
+      <p>Achtung! Sie verlassen jetzt unsere Website und werden zu Google Maps weitergeleitet.</p>
+    <button class="btn proceed-btn" id="proceed-redirection">Weiter</button>
+    </div>
+</div>
+
    <!-- google reviews -->
    <div class="reviews-container">
     <div class="reviews-section section">
@@ -365,7 +381,7 @@
     <footer>
      <div class="footer-section section">
       <div class="footer-logo">
-        <a href="./index.html"><img src="./assets/logo.png" alt=""></a>
+        <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
       </div>
       <a class="impressum-link" href="./impressum.html">
         Impressum
@@ -407,7 +423,21 @@
 
   </script>
   <!-- video -->
-  <script>
+   <script>
+//     const video = document.getElementById('hero-video');
+// // Hide controls by default
+// video.controls = false;
+// // Show controls on hover
+// video.addEventListener('mouseover', () => {
+//     video.controls = true;
+// });
+// // Hide controls when not hovering
+// video.addEventListener('mouseout', () => {
+//     video.controls = false;
+// });
+
+   </script>
+  <!-- <script>
     const video = document.getElementById('background-video');
 const playButton = document.getElementById('play-button');
 const overlayContent = document.querySelector('.film-overlay-content');
@@ -426,7 +456,34 @@ video.addEventListener('pause', () => {
 });
 
 
-  </script>
+  </script> -->
+  <!-- map redirection -->
+   <script>
+
+     // Get the required elements
+  const locationLink = document.querySelector('.location a'); // Link to Google Maps
+  const popup = document.getElementById('popup'); // Popup element
+  const cancelBtn = document.getElementById('cancel-redirection'); // Close icon
+  const proceedBtn = document.getElementById('proceed-redirection'); // Proceed button
+  
+  // Add event listener to the location link
+  locationLink.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default redirection
+      popup.style.display = 'grid'; // Show popup
+  });
+  
+  // Add event listener to the close (cancel) button
+  cancelBtn.addEventListener('click', function () {
+      popup.style.display = 'none'; // Hide popup
+  });
+  
+  // Add event listener to the proceed button
+  proceedBtn.addEventListener('click', function () {
+      popup.style.display = 'none'; // Hide popup
+      window.open(locationLink.href, '_blank'); // Open the Google Maps link in a new tab
+  });
+   </script>
+
   <!-- page reload -->
    <script>
     let lastScreenWidth = window.innerWidth;
@@ -541,21 +598,14 @@ var swiper2 = new Swiper(".mySwiper2", {
    <!-- 
   Betreff: Neue Nachricht von Ihrer Website
 
-Sehr geehrte Damen und Herren,
-
 Sie haben eine neue Nachricht über das Kontaktformular Ihrer Website erhalten. Hier sind die Details:
 
-Firma: {{firma}}
+
 Anrede: {{anrede}}
-Titel: {{titel}}
-Vorname: {{vorname}}
-Nachname: {{nachname}}
+Name: {{name}}
 E-Mail: {{email}}
 Telefon: {{telefon}}
-
-Betreff: {{betreff}}
-Nachricht:
-{{nachricht}}
+Nachricht:{{nachricht}}
 
 Mit freundlichen Grüßen,  
 
