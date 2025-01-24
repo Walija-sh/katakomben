@@ -307,6 +307,7 @@ aspect-ratio: 16/9;
   background-color: transparent;
   border: 2px solid #dc2751;
   color: #dc2751;
+  text-align: center;
 }
 .hero-btn:hover{
   color: white;
@@ -672,9 +673,15 @@ footer{
   color: white;
   font-size: 12px;
   transition: all .5s ease;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 25px;
+  
 }
 .impressum-link:hover{
-  color: #dc2751;
+  border: 1px solid #dc2751;
+  color: white;
+  background: #dc2751;
   text-decoration: underline;
 }
 /* imprint page */
@@ -775,11 +782,13 @@ footer{
     
   }
   .hero-btn{
-    padding: 15px 30px;
+    padding: 15px 20px;
+
     font-weight: 600;
   }
   .hero-btn-sm{
     display: none;
+        
   }
   .hero-btn-lg{
     display: inline-block;
