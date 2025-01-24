@@ -120,7 +120,7 @@ nav.sticky {
 
 .nav-logo{
   width: 100%;
-  max-width: 150px;
+  max-width: 100px;
 }
 .menu-toggler{
   display: grid;
@@ -206,7 +206,7 @@ nav.sticky {
 }
 .nav-logo-sm{
   width: 100%;
-  max-width: 150px;
+  max-width: 100px;
 }
 .close-menu{
   color: white;
@@ -241,6 +241,7 @@ nav.sticky {
 
 /* image film */
 .hero-section{
+  padding-top: 3rem;
 
   background: #282834;
 }
@@ -283,7 +284,7 @@ aspect-ratio: 16/9;
 }
 .film-overlay-content p{
   color: #C9C9CC;
-  font-size: 14px;
+  font-size: 12px;
 }
 /* .film-overlay-hidden{
   opacity: 0;
@@ -656,7 +657,7 @@ footer{
 }
 .footer-logo{
   width: 100%;
-  max-width: 150px;
+  max-width: 100px;
 }
 .impressum-link{
   color: white;
@@ -734,6 +735,9 @@ footer{
   nav{
     padding: 20px 40px;
   }
+  .nav-logo,.footer-logo{
+    max-width: 150px;
+  }
   .menu-toggler{
     display: none;
   }
@@ -743,9 +747,7 @@ footer{
   .sidebar{
     display: none;
   }
-  .image-film-section{
-    grid-template-columns: 1fr 1fr;
-  }
+  
   
   .film-overlay-content{
     
@@ -836,6 +838,9 @@ footer{
 @media screen and (min-width:1024px) {
   .image-film-section{
     /* max-height: 100vh; */
+  }
+  .image-film-section{
+    grid-template-columns: 1fr 1fr;
   }
   .film-overlay-content{
     align-items: center;
