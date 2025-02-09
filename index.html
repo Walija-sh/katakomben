@@ -584,36 +584,42 @@ var swiper2 = new Swiper(".mySwiper2", {
 </script>
 
 <script>
-  // Initialize EmailJS
-  (function () {
-      emailjs.init("10r7ZfnvO5aFTWs6Z"); // Replace with your EmailJS public key
-  })();
+  // EmailJS Configuration
+const EMAILJS_PUBLIC_KEY = "10r7ZfnvO5aFTWs6Z"; // Public Key
+const EMAILJS_SERVICE_ID = "service_lr3v81v";     // Service ID
+const EMAILJS_TEMPLATE_ID = "template_67dchyt";   // Template ID
 
-  // Add event listener to the form
-  document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent the default form submission
+// Initialize EmailJS
+(function () {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+})();
 
-      // Gather form data
-      const formData = new FormData(this);
-      const data = {
-          anrede: formData.get("anrede") || "",
-          name: formData.get("name") || "",
-          email: formData.get("email") || "",
-          telefon: formData.get("telefon") || "",
-          nachricht: formData.get("nachricht") || "",
-      };
+// Add event listener to the form
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
 
-      // Send email using EmailJS
-      emailjs
-          .send("service_lr3v81v", "template_67dchyt", data) // Replace with your service ID and template ID
-          .then(() => {
-              alert("Message sent successfully!");
-          })
-          .catch((error) => {
-              alert("Failed to send message. Please try again.");
-              console.error("Error: ", error);
-          });
-  });
+    // Gather form data
+    const formData = new FormData(this);
+    const data = {
+        anrede: formData.get("anrede") || "",   // Salutation
+        name: formData.get("name") || "",       // Full Name
+        email: formData.get("email") || "",     // Email Address
+        telefon: formData.get("telefon") || "", // Phone Number
+        nachricht: formData.get("nachricht") || "" // Message
+    };
+
+    // Send email using EmailJS
+    emailjs
+        .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data)
+        .then(() => {
+            alert("Message sent successfully!");
+        })
+        .catch((error) => {
+            alert("Failed to send message. Please try again.");
+            console.error("Error: ", error);
+        });
+});
+
 </script>
 
 
