@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katakomben Studios - Landing Page</title>
-  <link rel="shortcut icon" href="./assets/mainLogo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/logoBlack.png" type="image/x-icon">
   <!-- icons -->
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -31,8 +31,16 @@
       <span></span>
       <span></span>
     </div>
+   
     <div class="nav-links-lg">
+      <ul class="nav-items-lg">
+        <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
+        <li><a href="./studio.html"><h4>Das Tonstudio</h4> <span></span></a></li>
+        <li><a href="./services.html"><h4>Leistungen</h4> <span></span></a></li>
+        <li><a href="./samples.html"><h4>Hörproben</h4> <span></span></a></li>
+      </ul>
       <ul class="social-links-lg">
+        
         <li><a href="https://www.instagram.com/katakombenstudios/#"><i class="ri-instagram-line"></i></a></li>
         <li><a href="mailto:info@katakomben-studios.de"><i class="ri-mail-line"></i></a></li>
         <li><a href="https://wa.me/4917660836480" target="_blank" ><i class="ri-whatsapp-line"></i></a></li>
@@ -50,6 +58,12 @@
         <span id="close-menu" class="close-menu"><i class="ri-close-large-line"></i></span>
       </div>
       <div class="sidebar-list">
+        <ul class="nav-items-sm">
+          <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
+          <li><a href="./studio.html"><h4>Das Tonstudio</h4> <span></span></a></li>
+          <li><a href="./services.html"><h4>Leistungen</h4> <span></span></a></li>
+          <li><a href="./samples.html"><h4>Hörproben</h4> <span></span></a></li>
+        </ul>
         <ul class="social-links-sm">
           <li><a href="https://www.instagram.com/katakombenstudios/#"><i class="ri-instagram-line"></i> <span>Instagram</span></a></li>
           <li><a href="mailto:info@katakomben-studios.de"><i class="ri-mail-line"></i><span>E-Mail</span></a></li>
@@ -73,19 +87,20 @@
             </span>
             und unsere Leistungen!</h1>
         <p>Erlebe im Video, wie wir deinen Sound auf das nächste Level bringen und warum unser Studio der perfekte Ort für deine Musik ist. 
-          <br>
-          Klicke auf Play und starte jetzt deine Reise zu besseren Vocals!</p>
+          
+          <p>&nbsp;</p>
+          <p><strong>Klicke auf Play und starte jetzt deine Reise zu besseren Vocals!</strong></p>
         <!-- <button id="play-button" class="play-button btn">Play</button> -->
-        <a  href="#contactUs" class="hero-btn hero-btn-lg btn">Kennlerngespräch buchen</a>
+        <a  href="#contactUs" class="hero-btn hero-btn-lg btn">Kennenlerngespräch buchen</a>
         </div>
       </div>
       <div class="hero-video video-container">
-        <video id="hero-video"  controls    loop    poster="assets/filmCover.jpg">
-          <source src="assets/imageFilm.mp4" type="video/mp4">
+        <video id="hero-video"  controls    loop   poster="./assets/mainVIDEOposter.png" >
+          <source src="assets/mainVideo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-      <a  href="#contactUs" class="hero-btn hero-btn-sm btn">Kennlerngespräch buchen</a>
+      <a  href="#contactUs" class="hero-btn hero-btn-sm btn">Kennenlerngespräch buchen</a>
     </section>
   </header>
   <!-- services -->
@@ -265,6 +280,16 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <article class="review-card">
+                <div class="review-person">Sinan Choucair (68 
+                  Audio Mastering)</div>
+                <h6 class="review-time">vor 3 Tagen</h6>
+                <div class="review-stars">
+                  <span><i><i class="ri-star-fill"></i></i></span>
+                  <span><i><i class="ri-star-fill"></i></i></span>
+                  <span><i><i class="ri-star-fill"></i></i></span>
+                  <span><i><i class="ri-star-fill"></i></i></span>
+                  <span><i><i class="ri-star-fill"></i></i></span>
+                </div>
                 <div class="review-quote"><i class="ri-double-quotes-r"></i></div>
                 <p>Sehr guter Produzent 
                   der sein Handwerk 
@@ -277,9 +302,15 @@
                   angenehmer und top 
                   Geschäftspartner!</p>
                   <div class="review-line"></div>
-                  <div class="review-person">Sinan Choucair (68 
-                    Audio Mastering)</div>
-                  <h6 class="review-time">vor 3 Tagen</h6>
+                  
+                  
+                  
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="review-card">
+                <div class="review-person">Melanie</div>
+                  <h6 class="review-time">vor 5 Tagen</h6>
                   <div class="review-stars">
                     <span><i><i class="ri-star-fill"></i></i></span>
                     <span><i><i class="ri-star-fill"></i></i></span>
@@ -287,12 +318,6 @@
                     <span><i><i class="ri-star-fill"></i></i></span>
                     <span><i><i class="ri-star-fill"></i></i></span>
                   </div>
-                  
-                  
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="review-card">
                 <div class="review-quote"><i class="ri-double-quotes-r"></i></div>
                 <p> Ich kann mich den 
                   positiven Bewertungen 
@@ -304,8 +329,15 @@
                   vollsten Zufriedenheit 
                   umgesetzt!</p>
                   <div class="review-line"></div>
-                  <div class="review-person">Melanie</div>
-                  <h6 class="review-time">vor 5 Tagen</h6>
+                  
+                  
+                  
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="review-card">
+                <div class="review-person">Julien von Ameln</div>
+                  <h6 class="review-time">vor 1 Woche</h6>
                   <div class="review-stars">
                     <span><i><i class="ri-star-fill"></i></i></span>
                     <span><i><i class="ri-star-fill"></i></i></span>
@@ -313,12 +345,6 @@
                     <span><i><i class="ri-star-fill"></i></i></span>
                     <span><i><i class="ri-star-fill"></i></i></span>
                   </div>
-                  
-                  
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="review-card">
                 <div class="review-quote"><i class="ri-double-quotes-r"></i></div>
                 <p>Ich kenne das Studio 
                   seit nunmehr als 10 
@@ -334,28 +360,14 @@
                   in der Region mit 
                   Abstand! </p>
                   <div class="review-line"></div>
-                  <div class="review-person">Julien von Ameln</div>
-                  <h6 class="review-time">vor 1 Woche</h6>
-                  <div class="review-stars">
-                    <span><i><i class="ri-star-fill"></i></i></span>
-                    <span><i><i class="ri-star-fill"></i></i></span>
-                    <span><i><i class="ri-star-fill"></i></i></span>
-                    <span><i><i class="ri-star-fill"></i></i></span>
-                    <span><i><i class="ri-star-fill"></i></i></span>
-                  </div>
+                  
                   
                   
               </article>
             </div>
             <div class="swiper-slide">
               <article class="review-card">
-                <div class="review-quote"><i class="ri-double-quotes-r"></i></div>
-                <p>Super sympathisch und 
-                  professionell. Gute 
-                  Kommunikation. 
-                  Absolute Empfehlung. </p>
-                  <div class="review-line"></div>
-                  <div class="review-person">Eva-Maria Schork</div>
+                <div class="review-person">Eva-Maria Schork</div>
                   <h6 class="review-time">vor 2 Wochen</h6>
                   <div class="review-stars">
                     <span><i><i class="ri-star-fill"></i></i></span>
@@ -364,6 +376,13 @@
                     <span><i><i class="ri-star-fill"></i></i></span>
                     <span><i><i class="ri-star-fill"></i></i></span>
                   </div>
+                <div class="review-quote"><i class="ri-double-quotes-r"></i></div>
+                <p>Super sympathisch und 
+                  professionell. Gute 
+                  Kommunikation. 
+                  Absolute Empfehlung. </p>
+                  <div class="review-line"></div>
+                  
                   
                   
               </article>
@@ -506,6 +525,7 @@ window.addEventListener("resize", () => {
 
    </script>
   <!-- Swiper JS -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
