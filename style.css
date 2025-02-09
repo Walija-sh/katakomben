@@ -748,12 +748,15 @@ footer{
  }
  .imprint-hero-content h3{
   font-size: 36px;
+  text-transform: capitalize;
  }
  .imprint-hero-content h5{
   font-size: 16px;
+  text-transform: capitalize;
   
  }
  .imprint-home-link{
+  text-transform: capitalize;
   font-size: 16px;
   color: #dc2751;
  }
