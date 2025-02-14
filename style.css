@@ -375,6 +375,7 @@ aspect-ratio: 16/9;
 .services-container >section{
   padding: 40px 15px;
 }
+
 .services-header{
   text-transform: capitalize;
   text-align: center;
@@ -415,15 +416,20 @@ aspect-ratio: 16/9;
   padding: 30px;
   text-align: center;
   color: #282834;
+  min-height: 300px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 .service-card-content h3{
   font-size: 26px;
   transition: all .3s ease;
 
 }
-.service-card:hover h3{
+
+/* .service-card:hover h3{
   color: #dc2751;
-}
+} */
 .service-card:hover img{
   transform: scale(1.1);
 }
@@ -432,6 +438,22 @@ aspect-ratio: 16/9;
 }
 .service-card-content p{
   font-size: 16px;
+}
+.service-card-content a{
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  background: #dc2751;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 25px;
+  transition: all .3s ease;
+  width: fit-content;
+  justify-self: center;
+}
+.service-card-content a:hover{
+  background-color: #282834
 }
 .swiper-button-next {
   background: white;
@@ -938,12 +960,65 @@ ABOUT PAGE
 }
 .studio-card div img{
   object-fit: contain;
-  max-height: 300px;
+  max-height: 400px;
   transition: all .5s ease;
 }
 .studio-card div:hover img{
   transform: translateY(-5px);
   box-shadow: 4px 4px #dc2751;
+}
+.studio-modal{
+  background: #2828349f;
+  padding: 10px;
+  position: fixed;
+  inset: 0;
+  z-index: 200012300;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.stud-modal-active{
+  display: flex;
+}
+.stu-modal-close{
+  align-self: flex-end;
+  font-size: 1.5rem;
+  color: white;
+}
+.studio-modal-img{
+ max-height: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.studio-modal-img img{
+ width: 100%;
+ height: 100%;
+
+}
+.stud-imgFilm-container{
+  background: #f0f0f3;
+}
+.stud-imgFilm{
+  display: grid;
+  gap: 1rem;
+  padding: 40px 15px;
+}
+.stud-imgVideo{
+  max-height: 400px;
+  margin: 0 auto;
+}
+.stud-imgFilm video{
+  width: 100%;
+  height: 100%;
+  
+}
+.stud-imgFilm h2{
+  text-align: center;
+  color: #282834;
+  font-size: 28px;
+  font-weight: 700;
 }
 /* SERVICES PAGE */
 .servP-section{
@@ -992,7 +1067,7 @@ ABOUT PAGE
   font-size: 1.5rem;
 }
 .servp-card p{
-  color: #282834ce;
+  color: #282834;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -1046,6 +1121,8 @@ ABOUT PAGE
   radial-gradient(at 21% 48%, hsla(12,66%,69%,1) 0px, transparent 50%),
   radial-gradient(at 3% 30%, hsla(228,93%,62%,1) 0px, transparent 50%),
   radial-gradient(at 18% 26%, hsla(96,81%,72%,1) 0px, transparent 50%);
+  display: grid;
+  align-items: center;
 }
 .audio-play-content{
   padding: 40px 15px;
@@ -1063,6 +1140,8 @@ ABOUT PAGE
 }
 .song-title{
   flex-grow: 1;
+  font-size: 1.2rem;
+  font-weight:600;
 }
 .audio-player .controls{
   display: flex;
@@ -1110,8 +1189,48 @@ ABOUT PAGE
 .audio-player:hover .progress,.audio-active .progress{
   background: #dc2751;
 }
+.audio-lists{
+  display: grid;
+  gap: 1rem;
+}
+.aud-li{
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.aud-li div{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.aud-li span{
+  font-size: 1.5rem;
+  transition: all .3s ease;
+}
+.aud-icon{
+  color: #dc2751;
+}
 
-
+.aud-li h3{
+  font-size: 14px;
+  font-weight: 500;
+}
+.aud-dur{
+  font-size: 14px;
+  color: #282834e6;
+}
+.aud-li-active{
+  background: #282834d2;
+  color: white;
+}
+.aud-li-active p{
+  color: white;
+}
 /*  BOOK SECTION */
 .book-sect{
   padding: 40px 15px;
@@ -1140,7 +1259,32 @@ ABOUT PAGE
   font-size: 1.5rem;
   color: #282834;
 }
+/* btn */
+.calendly-btn-bg{
 
+  background: #f0f0f3;
+
+}
+.calendly-btn{
+  padding: 40px 15px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.calendly-btn a{
+  display: inline-block;
+  margin: 0 auto;
+  color: white;
+  background: #dc2751;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all .3s ease;
+}
+.calendly-btn a:hover{
+  background: #282834;
+}
 @media screen and (min-width:768px) {
   nav{
     padding: 10px 40px;
@@ -1297,6 +1441,7 @@ ABOUT PAGE
     font-size: 1rem;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
    }
    .studio-card:nth-child(odd) div{
     order: 2;
@@ -1308,6 +1453,12 @@ ABOUT PAGE
     transform: translateY(-5px);
     box-shadow: 8px 8px #dc2751;
   }
+  .stud-imgFilm{
+    padding: 40px;
+  }
+  .stud-imgFilm h2{
+    font-size: 48px;
+  }
   .servP-section{
     padding: 40px;
   }
@@ -1318,7 +1469,7 @@ ABOUT PAGE
     font-size: 2rem;
   }
   .servp-cards{
-    gap: 3rem;
+    gap: 4rem;
     margin-block: 2rem;
   }
   .serv-pCard-h{
@@ -1326,7 +1477,7 @@ ABOUT PAGE
     text-align: left;
   }
   .servp-card p{
-    font-size: 16px;
+    font-size: 20px;
   }
   .servp-card article{
     align-items: center;
@@ -1352,12 +1503,25 @@ ABOUT PAGE
   .samp-p{
     font-size: 1rem;
   }
+  .musicplayer{
+    grid-template-columns: 60% 1fr;
+  }
+  .song-title{
+    font-size: 1.5rem;
+  }
+  .audio-player{
+    order: 2;
+  }
+  .audio-lists{
+    order: 1;
+  }
+  .aud-li h3{
+    font-size: 1.1rem;
+  }
   .yt-videos{
     grid-template-columns: repeat(2,1fr);
   }
-  .musicplayer{
-    grid-template-columns: repeat(2,1fr);
-  }
+
   .book-sect{
     padding: 40px;
     font-size: 1.2rem;
@@ -1367,6 +1531,14 @@ ABOUT PAGE
   }
   .book-sect h5{
     font-size: 2rem;
+  }
+  .calendly-btn{
+    padding: 40px;
+    justify-content: flex-end;
+  }
+  .calendly-btn a{
+    font-size: 18px;
+    
   }
 }
 
@@ -1418,8 +1590,6 @@ ABOUT PAGE
     aspect-ratio: 10/9;
 
    }
-   .musicplayer{
-    grid-template-columns: repeat(3,1fr);
-  }
+   
   
 }

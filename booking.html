@@ -27,13 +27,14 @@
       <span></span>
       <span></span>
     </div>
-    
+   
     <div class="nav-links-lg">
       <ul class="nav-items-lg">
-        <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
+        <li><a href="./index.html"><h4>Home</h4> <span></span></a></li>
         <li><a href="./studio.html"><h4>Das Tonstudio</h4> <span></span></a></li>
         <li><a href="./services.html"><h4>Leistungen</h4> <span></span></a></li>
         <li><a href="./samples.html"><h4>Hörproben</h4> <span></span></a></li>
+        <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
       </ul>
       <ul class="social-links-lg">
         
@@ -43,7 +44,7 @@
         <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i></a></li>
       </ul>
       <div class="book-btn-lg">
-        <a href="#contactUs"> Termin buchen</a>
+        <a href="./index.html#contactUs"> Termin buchen</a>
       </div>
     </div>
     <div id="sidebar" class="sidebar">
@@ -55,10 +56,11 @@
       </div>
       <div class="sidebar-list">
         <ul class="nav-items-sm">
-          <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
+          <li><a href="./index.html"><h4>Home</h4> <span></span></a></li>
           <li><a href="./studio.html"><h4>Das Tonstudio</h4> <span></span></a></li>
           <li><a href="./services.html"><h4>Leistungen</h4> <span></span></a></li>
           <li><a href="./samples.html"><h4>Hörproben</h4> <span></span></a></li>
+          <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
         </ul>
         <ul class="social-links-sm">
           <li><a href="https://www.instagram.com/katakombenstudios/#"><i class="ri-instagram-line"></i> <span>Instagram</span></a></li>
@@ -67,7 +69,7 @@
           <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i><span>Telefon</span></a></li>
         </ul>
         <div class="book-btn-sm">
-          <a href="#contactUs"> Termin buchen</a>
+          <a href="./index.html#contactUs"> Termin buchen</a>
         </div>
       </div>
     </div>
@@ -77,8 +79,7 @@
       <div class="imprint-hero-content">
         <h3> 
           Termin buchen</h3>
-        <div><h5><a class="imprint-home-link" href="./index.html">Startseite</a></h5><span>|</span><h5> 
-          Termin buchen</h5></div>
+        
       </div>
     </div>
   </div>
@@ -140,7 +141,7 @@
     <footer>
      <div class="footer-section section">
       <div class="footer-logo">
-        <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
+        <a href="./index.html"><img src="./assets/footer-logo.png" alt=""></a>
       </div>
       <a class="impressum-link" href="./impressum.html">
         Impressum
@@ -148,21 +149,27 @@
      </div>
     </footer>
 
-  <script>
-    // Wait for the DOM to load
-    document.addEventListener("DOMContentLoaded", () => {
-      const nav = document.querySelector("nav"); // Select the <nav> element
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("nav");
   
-      // Add scroll event listener
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-          nav.classList.add("sticky"); // Add sticky class when scrolled
-        } else {
-          nav.classList.remove("sticky"); // Remove sticky class when at the top
-        }
-      });
-    });
-  </script>
+    // Function to check scroll position and update class
+    const updateNavSticky = () => {
+      if (window.scrollY > 0) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    };
+  
+    // Check on page load (for cases where page loads in the middle)
+    updateNavSticky();
+  
+    // Add scroll event listener
+    window.addEventListener("scroll", updateNavSticky);
+  });
+  
+    </script>
   <!-- sidebar -->
   <script>
     const menuToggler=document.getElementById('menu-toggler')

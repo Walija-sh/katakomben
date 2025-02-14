@@ -34,10 +34,11 @@
    
     <div class="nav-links-lg">
       <ul class="nav-items-lg">
-        <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
+        <li><a href="./index.html"><h4>Home</h4> <span></span></a></li>
         <li><a href="./studio.html"><h4>Das Tonstudio</h4> <span></span></a></li>
         <li><a href="./services.html"><h4>Leistungen</h4> <span></span></a></li>
         <li><a href="./samples.html"><h4>Hörproben</h4> <span></span></a></li>
+        <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
       </ul>
       <ul class="social-links-lg">
         
@@ -59,10 +60,11 @@
       </div>
       <div class="sidebar-list">
         <ul class="nav-items-sm">
-          <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
+          <li><a href="./index.html"><h4>Home</h4> <span></span></a></li>
           <li><a href="./studio.html"><h4>Das Tonstudio</h4> <span></span></a></li>
           <li><a href="./services.html"><h4>Leistungen</h4> <span></span></a></li>
           <li><a href="./samples.html"><h4>Hörproben</h4> <span></span></a></li>
+          <li><a href="./about.html"><h4>Über mich</h4> <span></span></a></li>
         </ul>
         <ul class="social-links-sm">
           <li><a href="https://www.instagram.com/katakombenstudios/#"><i class="ri-instagram-line"></i> <span>Instagram</span></a></li>
@@ -91,11 +93,11 @@
           <p>&nbsp;</p>
           <p><strong>Klicke auf Play und starte jetzt deine Reise zu besseren Vocals!</strong></p>
         <!-- <button id="play-button" class="play-button btn">Play</button> -->
-        <a  href="#contactUs" class="hero-btn hero-btn-lg btn">Kennenlerngespräch buchen</a>
+        <a  href="./booking.html" class="hero-btn hero-btn-lg btn">Kennenlerngespräch buchen</a>
         </div>
       </div>
       <div class="hero-video video-container">
-        <video id="hero-video"  controls    loop   poster="./assets/mainVIDEOposter.png" >
+        <video id="hero-video"  controls    loop   poster="./assets/Cover Video PNG.png" >
           <source src="assets/mainVideo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -127,6 +129,7 @@
                   zur Geltung kommt – für eine
                   Aufnahme, die genauso
                   einzigartig ist wie du!</p>
+                <a href="./services.html">Erfahre mehr</a>
               </div>
             </div>
           </div>
@@ -145,6 +148,7 @@
                   dein Song voll und dynamisch
                   klingt – genau wie du es dir
                   vorstellst.</p>
+                  <a href="./services.html">Erfahre mehr</a>
               </div>
             </div>
           </div>
@@ -162,6 +166,7 @@
                   jeder Umgebung genauso fett
                   und professionell klingt, wie er
                   es verdient. </p>
+                  <a href="./services.html">Erfahre mehr</a>
               </div>
             </div>
           </div>
@@ -399,11 +404,16 @@
       </div>
     </div>
    </div>
+   <div class=" calendly-btn-bg">
+    <div class="calendly-btn section">
+      <a href="./booking.html">KENNENLERNGESPRÄCH BUCHEN</a>
+    </div>
+   </div>
    <!-- footer -->
     <footer>
      <div class="footer-section section">
       <div class="footer-logo">
-        <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
+        <a href="./index.html"><img src="./assets/footer-logo.png" alt=""></a>
       </div>
       <a class="impressum-link" href="./impressum.html">
         Impressum
@@ -412,19 +422,25 @@
     </footer>
 
   <script>
-    // Wait for the DOM to load
     document.addEventListener("DOMContentLoaded", () => {
-      const nav = document.querySelector("nav"); // Select the <nav> element
-  
-      // Add scroll event listener
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-          nav.classList.add("sticky"); // Add sticky class when scrolled
-        } else {
-          nav.classList.remove("sticky"); // Remove sticky class when at the top
-        }
-      });
-    });
+  const nav = document.querySelector("nav");
+
+  // Function to check scroll position and update class
+  const updateNavSticky = () => {
+    if (window.scrollY > 0) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  };
+
+  // Check on page load (for cases where page loads in the middle)
+  updateNavSticky();
+
+  // Add scroll event listener
+  window.addEventListener("scroll", updateNavSticky);
+});
+
   </script>
   <!-- sidebar -->
   <script>
