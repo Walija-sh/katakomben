@@ -15,8 +15,6 @@
 
 <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<!-- verification -->
-<meta name="google-site-verification" content="GclR9lMjf4xh1miWYU-sfa2bshDOD_L3K-w4755s8Tc" />
 
 </head>
 
@@ -24,7 +22,7 @@
 
   <nav >
     <div class="nav-logo">
-      <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
+      <a href="./index.html"><img src="./assets/mainLogo.png" alt="Logo"></a>
     </div>
     <div id="menu-toggler" class="menu-toggler">
       <span></span>
@@ -48,13 +46,13 @@
         <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i></a></li>
       </ul>
       <div class="book-btn-lg">
-        <a href="#contactUs"> Termin buchen</a>
+        <a href="./booking.html"> Termin buchen</a>
       </div>
     </div>
     <div id="sidebar" class="sidebar">
       <div class="sidebar-header">
         <div class="nav-logo-sm">
-          <a href="./index.html"><img src="./assets/mainLogo.png" alt=""></a>
+          <a href="./index.html"><img src="./assets/mainLogo.png" alt="Logo"></a>
         </div>
         <span id="close-menu" class="close-menu"><i class="ri-close-large-line"></i></span>
       </div>
@@ -73,7 +71,7 @@
           <li><a href="tel:+0176 60836480"><i class="ri-phone-line"></i><span>Telefon</span></a></li>
         </ul>
         <div class="book-btn-sm">
-          <a href="#contactUs"> Termin buchen</a>
+          <a href="./booking.html"> Termin buchen</a>
         </div>
       </div>
     </div>
@@ -92,7 +90,7 @@
           
           <p>&nbsp;</p>
           <p><strong>Klicke auf Play und starte jetzt deine Reise zu besseren Vocals!</strong></p>
-        <!-- <button id="play-button" class="play-button btn">Play</button> -->
+        
         <a  href="./booking.html" class="hero-btn hero-btn-lg btn">Kennenlerngespräch buchen</a>
         </div>
       </div>
@@ -264,7 +262,7 @@
   <!-- location -->
    <div class="location">
     <a target="_blank" href="https://www.google.com/maps/place/Tonstudio+-+Katakomben+Studios+%7C+Mannheim/@49.485033,8.465517,16z/data=!4m6!3m5!1s0x4797cda8c89f349d:0x891fd3270cc26737!8m2!3d49.4850333!4d8.4655171!16s%2Fg%2F11w7lmpl2d?hl=en&entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D">
-      <img src="./assets/location.png" alt="">
+      <img src="./assets/location.png" alt="location">
     </a>
    </div>
    <!-- popup -->
@@ -413,7 +411,7 @@
     <footer>
      <div class="footer-section section">
       <div class="footer-logo">
-        <a href="./index.html"><img src="./assets/footer-logo.png" alt=""></a>
+        <a href="./index.html"><img src="./assets/footer-logo.png" alt="Logo"></a>
       </div>
       <a class="impressum-link" href="./impressum.html">
         Impressum
@@ -460,41 +458,7 @@
 
 
   </script>
-  <!-- video -->
-   <script>
-//     const video = document.getElementById('hero-video');
-// // Hide controls by default
-// video.controls = false;
-// // Show controls on hover
-// video.addEventListener('mouseover', () => {
-//     video.controls = true;
-// });
-// // Hide controls when not hovering
-// video.addEventListener('mouseout', () => {
-//     video.controls = false;
-// });
 
-   </script>
-  <!-- <script>
-    const video = document.getElementById('background-video');
-const playButton = document.getElementById('play-button');
-const overlayContent = document.querySelector('.film-overlay-content');
-
-// Add event listener to the play button
-playButton.addEventListener('click', () => {
-  video.play(); // Play the video
-  video.setAttribute('controls', ''); // Add controls to the video
-  overlayContent.classList.add('film-overlay-hidden'); // Hide overlay content
-});
-
-// Add event listener for video pause
-video.addEventListener('pause', () => {
-  video.removeAttribute('controls'); // Remove controls from the video
-  overlayContent.classList.remove('film-overlay-hidden'); // Show overlay content
-});
-
-
-  </script> -->
   <!-- map redirection -->
    <script>
 
@@ -548,8 +512,8 @@ window.addEventListener("resize", () => {
   <script>
     var swiper = new Swiper(".mySwiper", {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-next",
   },
   spaceBetween: 30,
   loop: true, // Enable loop

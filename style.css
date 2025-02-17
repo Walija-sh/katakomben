@@ -783,7 +783,7 @@ footer{
   align-items: center;
   justify-content: center;
   padding: 30px;
-  min-height: 450px;
+  min-height: 300px;
   color: white;
  }
  .imprint-hero-content{
@@ -1423,6 +1423,9 @@ ABOUT PAGE
   .imprint-hero-content h3{
     font-size: 48px;
    }
+   .imprint-hero-overlay{
+    min-height: 450px;
+   }
    .about-cards{
     gap: 3rem;
     padding: 60px 40px;
@@ -1533,6 +1536,7 @@ ABOUT PAGE
   }
   .musicplayer{
     grid-template-columns: 60% 1fr;
+
   }
   .song-title{
     font-size: 1.5rem;
@@ -1562,7 +1566,6 @@ ABOUT PAGE
   }
   .calendly-btn{
     padding: 40px;
-    justify-content: flex-end;
   }
   .calendly-btn a{
     font-size: 18px;
