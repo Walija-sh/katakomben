@@ -87,7 +87,7 @@
     <div class="studio-modal">
       <span class="stu-modal-close"><i class="ri-close-line"></i></span>
       <div class="studio-modal-img">
-        <img src="./assets/studioCard1.jpg" alt="modal-img">
+        <img src="./assets/studioCard1.png" alt="modal-img">
       </div>
     </div>
 
@@ -298,6 +298,11 @@ direkte Klangwiedergabe während der Sessions.
     1200: {
       slidesPerView: 5,
       
+    },
+  },
+  on: {
+    init: function () {
+      this.update(); // Force update to fix Safari issues
     },
   },
 

@@ -224,6 +224,7 @@
               </div>
             </div>
           </div>
+         
           
         </div>
         <div class="swiper-button-next button-next"></div>
@@ -564,6 +565,7 @@ window.addEventListener("resize", () => {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -599,6 +601,11 @@ window.addEventListener("resize", () => {
   },
     },
   },
+  on: {
+    init: function () {
+      this.update(); // Force update to fix Safari issues
+    },
+  },
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
@@ -619,6 +626,11 @@ var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 3,
       },
     },
+    on: {
+    init: function () {
+      this.update(); // Force update to fix Safari issues
+    },
+  },
   });
 
   </script>
