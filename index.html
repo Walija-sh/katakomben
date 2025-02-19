@@ -168,6 +168,62 @@
               </div>
             </div>
           </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="./assets/serv1.png" alt="services">
+                
+              </div>
+              <div class="service-card-content">
+                <h3>Recording</h3>
+                <p> Beim Recording fangen wir
+                  deine Stimme mit höchster
+                  Präzision ein, sodass jede
+                  Nuance und Emotion perfekt
+                  zur Geltung kommt – für eine
+                  Aufnahme, die genauso
+                  einzigartig ist wie du!</p>
+                <a href="./services.html">Erfahre mehr</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="./assets/serv2.png" alt="services">
+                
+              </div>
+              <div class="service-card-content">
+                <h3> MIXING</h3>
+                <p>  Beim Mixing feilen wir an
+                  jedem Detail deiner Musik, um
+                  die perfekte Balance zwischen
+                  allen Spuren zu schaffen sodass
+                  dein Song voll und dynamisch
+                  klingt – genau wie du es dir
+                  vorstellst.</p>
+                  <a href="./services.html">Erfahre mehr</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="./assets/serv3.png" alt="services">
+                
+              </div>
+              <div class="service-card-content">
+                <h3> MASTERING</h3>
+                <p> Beim Mastering bekommt dein
+                  Song den letzten Schliff, damit
+                  er auf allen Plattformen und in
+                  jeder Umgebung genauso fett
+                  und professionell klingt, wie er
+                  es verdient. </p>
+                  <a href="./services.html">Erfahre mehr</a>
+              </div>
+            </div>
+          </div>
           
         </div>
         <div class="swiper-button-next button-next"></div>
@@ -529,10 +585,18 @@ window.addEventListener("resize", () => {
     // Medium screens (≥ 768px): 2 slides
     768: {
       slidesPerView: 2,
+      navigation: {
+    nextEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-next",
+  },
     },
     // Large screens (≥ 1280px): 3 slides
     1380: {
       slidesPerView: 3,
+      navigation: {
+    nextEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-next",
+  },
     },
   },
 });
