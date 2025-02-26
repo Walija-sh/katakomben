@@ -245,6 +245,9 @@ transition: all .3s ease-in;
 .nav-items-lg li a:hover h4{
 color: #dc2751;
 }
+.book-btn-sm-cont{
+  flex-grow: 1;
+}
 .book-btn-lg a,.book-btn-sm a{
 padding: 15px 30px;
 border-radius: 25px;
@@ -256,6 +259,16 @@ font-size: 16px;
 -o-transition: all .5s ease;
 transition: all .5s ease;
 white-space: nowrap;
+}
+.book-btn-sm{
+  justify-self: flex-end;
+  padding-right: 10px;
+ 
+}
+.book-btn-sm a{
+  font-size: 12px;
+  padding: 10px 20px;
+  max-width: fit-content;
 }
 .book-btn-lg a:hover,.book-btn-sm a:hover{
 background: white;
@@ -1626,6 +1639,9 @@ background: #282834;
 
 
 @media screen and (min-width:768px) {
+  .book-btn-sm-cont{
+    display: none;
+  }
 nav{
   padding: 10px 40px;
 }
