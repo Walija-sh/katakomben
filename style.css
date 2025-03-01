@@ -208,10 +208,7 @@ transition: all .3s ease-in;
 .nav-items-lg li a:hover h4{
 color: #dc2751;
 }
-.book-btn-sm-cont{
-  flex-grow: 1;
-  width: 100%;
-}
+
 .book-btn-lg a,.book-btn-sm a{
 padding: 15px 30px;
 border-radius: 25px;
@@ -222,19 +219,7 @@ font-size: 16px;
 transition: all .5s ease;
 white-space: nowrap;
 }
-.book-btn-sm{
-  justify-self: flex-end;
-  padding-right: 10px;
- 
-}
-.book-btn-sm a{
-  display: inline-block;
-  font-size: 12px;
-  padding: 10px 20px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
+
 .book-btn-lg a:hover,.book-btn-sm a:hover{
 background: white;
 color: #282834;
